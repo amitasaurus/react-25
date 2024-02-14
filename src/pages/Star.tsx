@@ -16,7 +16,7 @@ const imgRatingMap: Record<string, string> = {
   'rating-5': rating5,
 };
 
-export default function Route({}: Props) {
+export default function route({}: Props) {
   const [rating, setRating] = useState(4);
   return (
     <div className="flex items-center justify-center w-full h-screen bg-gradient-1">

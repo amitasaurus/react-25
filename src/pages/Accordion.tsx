@@ -1,7 +1,7 @@
 import Accordion from '../components/Accordion';
 import { accordionData } from '../utils/data';
-
-function route() {
+type Props = {};
+function route({}: Props) {
   return (
     <div>
       <Accordion className="border rounded border-slate-200 w-[720px] my-8">
