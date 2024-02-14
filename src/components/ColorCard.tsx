@@ -4,7 +4,7 @@ type Props = {
 };
 
 export default function Card({ color }: Props) {
-  let hexCode = getHexColor(color) ?? '#000';
+  const hexCode = getHexColor(color) ?? '#000';
   return (
     <div
       className="flex flex-col items-center justify-end"

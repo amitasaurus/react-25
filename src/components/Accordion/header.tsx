@@ -3,7 +3,7 @@ import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 type Props = {
   children: React.ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
-  expanded?: Boolean;
+  expanded?: boolean;
 };
 
 export default function Header({ children, onClick, expanded }: Props) {

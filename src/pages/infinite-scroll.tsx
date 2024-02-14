@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react';
 import InstagramCard from '../components/instagramCard';
 import getPosts from '../utils/infinite-scroll-helper';
 
-type Props = {};
-
-export default function InfiniteScroll({}: Props) {
+export default function InfiniteScroll() {
   const limit = 10;
   const [cursor, setCursor] = useState(0);
   const [posts, setPosts] = useState<string[]>([]);

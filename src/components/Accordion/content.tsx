@@ -1,7 +1,7 @@
 import cn from '../../utils/cn';
 type Props = {
   children: React.ReactNode;
-  expanded?: Boolean;
+  expanded?: boolean;
 };
 
 export default function Content({ children, expanded }: Props) {

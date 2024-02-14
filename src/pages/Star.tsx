@@ -6,8 +6,6 @@ import rating4 from '../assets/rating-3.png';
 import rating5 from '../assets/rating-4.png';
 import { useState } from 'react';
 
-type Props = {};
-
 const imgRatingMap: Record<string, string> = {
   'rating-1': rating1,
   'rating-2': rating2,
@@ -16,7 +14,7 @@ const imgRatingMap: Record<string, string> = {
   'rating-5': rating5,
 };
 
-export default function route({}: Props) {
+export default function route() {
   const [rating, setRating] = useState(4);
   return (
     <div className="flex items-center justify-center w-full h-screen bg-gradient-1">

@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { generatePalette } from '../utils';
 import Card from '../components/ColorCard';
-type Props = {};
-function route({}: Props) {
+function route() {
   const [palette, setPalette] = useState(generatePalette());
   function handleKeyPress(event: KeyboardEvent) {
     if (event.key === ' ') setPalette(generatePalette());

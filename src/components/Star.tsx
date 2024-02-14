@@ -5,7 +5,7 @@ import { generateKey } from '../utils';
 
 type Props = {
   count?: number;
-  onRating: Function;
+  onRating: (rating: number) => void;
 };
 
 export default function Star({ count = 5, onRating }: Props) {
