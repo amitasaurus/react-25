@@ -1,5 +1,4 @@
 export function generateRandomColor(hex: boolean = false): string {
-  const min = 0;
   const max = 255;
   const r = Math.floor(Math.random() * max);
   const g = Math.floor(Math.random() * max);
@@ -37,4 +36,7 @@ export function getHexColor(rgbColor: string): string | null {
   hexCode = hexCode.padStart(6, '0');
   hexCode = `#${hexCode}`.toUpperCase();
   return hexCode;
+}
+export function generateKey() {
+  return Math.random().toString(36).substr(2, 9);
 }

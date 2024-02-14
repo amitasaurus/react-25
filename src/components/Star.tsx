@@ -1,6 +1,7 @@
 import { FaRegStar, FaStar } from 'react-icons/fa6';
 import cn from '../utils/cn';
 import { useState } from 'react';
+import { generateKey } from '../utils';
 
 type Props = {
   count?: number;
@@ -15,17 +16,17 @@ export default function Star({ count = 5, onRating }: Props) {
   }
   return (
     <div className="flex items-center justify-between">
-      {[...new Array(count)].map((e, i) =>
+      {[...new Array(count)].map((_, i) =>
         i <= active ? (
           <FaStar
-            key={i}
+            key={generateKey()}
             className={cn('cursor-pointer fill-amber-400')}
             size={24}
             onClick={() => handleRating(i)}
           />
         ) : (
           <FaRegStar
-            key={i}
+            key={generateKey()}
             className={cn('cursor-pointer fill-amber-400')}
             onClick={() => handleRating(i)}
             size={24}
