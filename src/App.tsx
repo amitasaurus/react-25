@@ -1,18 +1,22 @@
 import './App.css';
-import Accordion from './components/Accordion';
-import { accordionData } from './utils/data';
+import { Link } from 'react-router-dom';
+
+const paths = [
+  { url: '/accordion', displayName: 'Accordion' },
+  { url: '/color-generator', displayName: 'Color Generator' },
+];
 
 function App() {
   return (
-    <div>
-      <Accordion className="border rounded border-slate-200 w-[500px] my-8">
-        {accordionData.map((e, i) => (
-          <div key={i} title={e[0]}>
-            {e[1]}
-          </div>
-        ))}
-      </Accordion>
-    </div>
+    <ol>
+      {paths.map((e, i) => (
+        <li key={i} className="mt-2 text-2xl font-semibold">
+          <Link to={e.url} className=" text-slate-800">
+            <span className="text-xl">{i + 1}.</span> {e.displayName}
+          </Link>
+        </li>
+      ))}
+    </ol>
   );
 }
 
