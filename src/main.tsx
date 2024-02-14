@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.tsx';
 import Accordion from './pages/Accordion.tsx';
 import ColorGenerator from './pages/ColorGenerator.tsx';
+import Star from './pages/Star.tsx';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: '/color-generator',
     element: <ColorGenerator />,
+  },
+  {
+    path: '/star-rating',
+    element: <Star />,
   },
 ]);
 

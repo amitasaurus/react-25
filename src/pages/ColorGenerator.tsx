@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { generatePalette } from '../utils';
-import Card from '../components/ColGen/card';
+import Card from '../components/ColorCard';
 
 function route() {
   const [palette, setPalette] = useState(generatePalette());

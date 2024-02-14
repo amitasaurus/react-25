@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const paths = [
   { url: '/accordion', displayName: 'Accordion' },
   { url: '/color-generator', displayName: 'Color Generator' },
+  { url: '/star-rating', displayName: 'Star Rating' },
 ];
 
 function App() {

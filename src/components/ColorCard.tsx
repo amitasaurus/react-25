@@ -1,4 +1,4 @@
-import { getHexColor } from '../../utils';
+import { getHexColor } from '../utils';
 type Props = {
   color: string;
 };
