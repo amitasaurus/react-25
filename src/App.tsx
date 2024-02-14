@@ -5,6 +5,7 @@ const paths = [
   { url: '/accordion', displayName: 'Accordion' },
   { url: '/color-generator', displayName: 'Color Generator' },
   { url: '/star-rating', displayName: 'Star Rating' },
+  { url: '/image-slider', displayName: 'Image Slider' },
 ];
 
 function App() {

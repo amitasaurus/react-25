@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.tsx';
-import Accordion from './pages/Accordion.tsx';
-import ColorGenerator from './pages/ColorGenerator.tsx';
-import Star from './pages/Star.tsx';
+import Accordion from './pages/accordion.tsx';
+import ColorGenerator from './pages/color-generator.tsx';
+import Star from './pages/star.tsx';
+import ImageSlider from './pages/image-slider.tsx';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: '/star-rating',
     element: <Star />,
+  },
+  {
+    path: '/image-slider',
+    element: <ImageSlider />,
   },
 ]);
 
