@@ -6,6 +6,7 @@ const paths = [
   { url: '/color-generator', displayName: 'Color Generator' },
   { url: '/star-rating', displayName: 'Star Rating' },
   { url: '/image-slider', displayName: 'Image Slider' },
+  { url: '/infinite-scroll', displayName: 'Infinite Scroll' },
 ];
 
 function App() {

@@ -6,6 +6,7 @@ import Accordion from './pages/accordion.tsx';
 import ColorGenerator from './pages/color-generator.tsx';
 import Star from './pages/star.tsx';
 import ImageSlider from './pages/image-slider.tsx';
+import InfiniteScroll from './pages/infinite-scroll.tsx';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/image-slider',
     element: <ImageSlider />,
+  },
+  {
+    path: '/infinite-scroll',
+    element: <InfiniteScroll />,
   },
 ]);
 
