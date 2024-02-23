@@ -2,7 +2,7 @@ import TreeView from "../components/TreeView";
 import { treeData } from "../utils/data";
 export default function Page() {
   return (
-    <div className="grid h-screen w-full grid-cols-12">
+    <div className="varela-round-regular grid h-screen w-full grid-cols-12">
       <div className="col-span-3 bg-slate-100 p-2">
         <TreeView data={treeData} />
       </div>

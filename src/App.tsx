@@ -26,7 +26,7 @@ function App() {
     }
   }
   return (
-    <div className="relative flex h-screen w-screen items-center justify-center overflow-x-hidden overflow-y-scroll bg-white dark:bg-slate-800">
+    <div className="varela-round-regular relative flex h-screen w-screen items-center justify-center overflow-x-hidden overflow-y-scroll bg-white dark:bg-slate-800">
       <div className="fixed right-0 top-0 m-4 flex items-center">
         <div className="mr-2 text-xs font-medium text-slate-500 dark:text-slate-400">
           Dark Mode {enabled ? "ON" : "OFF"}
