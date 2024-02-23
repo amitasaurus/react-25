@@ -16,27 +16,43 @@ const paths = [
 
 function App() {
   const [enabled, setEnabled] = React.useState(false);
-
+  function toggleTheme() {
+    const darkMode = !enabled;
+    setEnabled(darkMode);
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }
   return (
-    <div className="relative flex h-screen w-screen items-center justify-center overflow-x-hidden overflow-y-scroll">
-      <Switch
-        checked={enabled}
-        onChange={setEnabled}
-        className={`${
-          enabled ? "bg-blue-600" : "bg-gray-200"
-        } fixed right-0 top-0 m-4 inline-flex h-6 w-11 items-center rounded-full`}
-      >
-        <span className="sr-only">Toggle Theme</span>
-        <span
+    <div className="relative flex h-screen w-screen items-center justify-center overflow-x-hidden overflow-y-scroll bg-white dark:bg-slate-800">
+      <div className="fixed right-0 top-0 m-4 flex items-center">
+        <div className="mr-2 text-xs font-medium text-slate-500 dark:text-slate-400">
+          Dark Mode {enabled ? "ON" : "OFF"}
+        </div>
+        <Switch
+          checked={enabled}
+          onChange={toggleTheme}
           className={`${
-            enabled ? "translate-x-6" : "translate-x-1"
-          } inline-block h-4 w-4 transform rounded-full bg-white transition`}
-        />
-      </Switch>
+            enabled ? "bg-blue-600" : "bg-gray-200"
+          } inline-flex h-6 w-11 items-center rounded-full`}
+        >
+          <span className="sr-only">Toggle Theme</span>
+          <span
+            className={`${
+              enabled ? "translate-x-6" : "translate-x-1"
+            } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+          />
+        </Switch>
+      </div>
       <ol>
         {paths.map((e, i) => (
           <li key={i} className="mt-2 text-2xl font-semibold">
-            <Link to={e.url} className=" text-slate-800">
+            <Link
+              to={e.url}
+              className="text-slate-800 hover:text-indigo-500 dark:text-white dark:hover:text-indigo-500"
+            >
               <span className="text-xl">{i + 1}.</span> {e.displayName}
             </Link>
           </li>
