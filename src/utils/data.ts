@@ -1,6 +1,28 @@
+import {
+  RiHomeLine,
+  RiNodeTree,
+  RiHistoryFill,
+  RiGroupLine,
+  RiUserLine,
+  RiFocus2Line,
+  RiReactjsFill,
+  RiAndroidLine,
+  RiSeoLine,
+  RiFacebookCircleLine,
+  RiContactsBookLine,
+} from "react-icons/ri";
+import { IconType } from "react-icons";
+export interface navigation {
+  label: string;
+  url: string;
+  icon: IconType;
+  submenu?: navigation[];
+}
+type TreeData = Array<navigation>;
+
 export const accordionData: Array<[string, string]> = [
   [
-    'What is the purpose of this FAQ section?',
+    "What is the purpose of this FAQ section?",
     `The purpose of this FAQ section is to address common queries and provide helpful answers to our users' questions regarding our product/service.`,
   ],
   [
@@ -61,9 +83,96 @@ export const accordionData: Array<[string, string]> = [
   ],
 ];
 export const imageData: Array<string> = [
-  'https://images.unsplash.com/photo-1707343843982-f8275f3994c5?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1610809027249-86c649feacd5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1599137258505-8871bd07cbbb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1592450620607-efefef574bd0?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  "https://images.unsplash.com/photo-1707343843982-f8275f3994c5?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1610809027249-86c649feacd5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1599137258505-8871bd07cbbb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1592450620607-efefef574bd0?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+];
+export const treeData: TreeData = [
+  {
+    label: "Home",
+    url: "/",
+    icon: RiHomeLine,
+  },
+  {
+    label: "About",
+    url: "/about",
+    icon: RiNodeTree,
+    submenu: [
+      {
+        label: "Company",
+        url: "/about/company",
+        icon: RiNodeTree,
+        submenu: [
+          {
+            label: "History",
+            url: "/about/company/history",
+            icon: RiHistoryFill,
+          },
+          {
+            label: "Team",
+            url: "/about/company/team",
+            icon: RiNodeTree,
+            submenu: [
+              {
+                label: "Management",
+                url: "/about/company/team/management",
+                icon: RiGroupLine,
+              },
+              {
+                label: "Employees",
+                url: "/about/company/team/employees",
+                icon: RiUserLine,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        label: "Mission",
+        url: "/about/mission",
+        icon: RiFocus2Line,
+      },
+    ],
+  },
+  {
+    label: "Services",
+    url: "/services",
+    icon: RiNodeTree,
+    submenu: [
+      {
+        label: "Web Design",
+        url: "/services/web",
+        icon: RiReactjsFill,
+      },
+      {
+        label: "Mobile App Development",
+        url: "/services/mobile",
+        icon: RiAndroidLine,
+      },
+      {
+        label: "Digital Marketing",
+        url: "/services/marketing",
+        icon: RiNodeTree,
+        submenu: [
+          {
+            label: "SEO",
+            url: "/services/marketing/seo",
+            icon: RiSeoLine,
+          },
+          {
+            label: "Social Media Marketing",
+            url: "/services/marketing/social-media",
+            icon: RiFacebookCircleLine,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Contact",
+    url: "/contact",
+    icon: RiContactsBookLine,
+  },
 ];
