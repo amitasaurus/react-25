@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '../components/Button';
 import Modal from '../components/Modal';
 
@@ -10,7 +10,7 @@ export default function Page({}: Props) {
     setOpen(!open);
   }
   return (
-    <div className="flex items-center justify-center w-screen h-screen">
+    <div className="flex items-center justify-center w-screen h-screen bg-slate-100">
       <Button className="z-0" onClick={toggle} text="Open Dialog" />
       <Modal open={open} close={() => setOpen(!open)}>
         <div slot="headline">Demon Slayer: Kimetsu no Yaiba</div>

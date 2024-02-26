@@ -10,8 +10,8 @@ import {
   RiSeoLine,
   RiFacebookCircleLine,
   RiContactsBookLine,
-} from "react-icons/ri";
-import { IconType } from "react-icons";
+} from 'react-icons/ri';
+import { IconType } from 'react-icons';
 export interface navigation {
   label: string;
   url: string;
@@ -22,7 +22,7 @@ type TreeData = Array<navigation>;
 
 export const accordionData: Array<[string, string]> = [
   [
-    "What is the purpose of this FAQ section?",
+    'What is the purpose of this FAQ section?',
     `The purpose of this FAQ section is to address common queries and provide helpful answers to our users' questions regarding our product/service.`,
   ],
   [
@@ -83,46 +83,46 @@ export const accordionData: Array<[string, string]> = [
   ],
 ];
 export const imageData: Array<string> = [
-  "https://images.unsplash.com/photo-1707343843982-f8275f3994c5?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1610809027249-86c649feacd5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1599137258505-8871bd07cbbb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1592450620607-efefef574bd0?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  'https://images.unsplash.com/photo-1707343843982-f8275f3994c5?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1610809027249-86c649feacd5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1599137258505-8871bd07cbbb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1592450620607-efefef574bd0?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 ];
 export const treeData: TreeData = [
   {
-    label: "Home",
-    url: "/",
+    label: 'Home',
+    url: '/',
     icon: RiHomeLine,
   },
   {
-    label: "About",
-    url: "/about",
+    label: 'About',
+    url: '/about',
     icon: RiNodeTree,
     submenu: [
       {
-        label: "Company",
-        url: "/about/company",
+        label: 'Company',
+        url: '/about/company',
         icon: RiNodeTree,
         submenu: [
           {
-            label: "History",
-            url: "/about/company/history",
+            label: 'History',
+            url: '/about/company/history',
             icon: RiHistoryFill,
           },
           {
-            label: "Team",
-            url: "/about/company/team",
+            label: 'Team',
+            url: '/about/company/team',
             icon: RiNodeTree,
             submenu: [
               {
-                label: "Management",
-                url: "/about/company/team/management",
+                label: 'Management',
+                url: '/about/company/team/management',
                 icon: RiGroupLine,
               },
               {
-                label: "Employees",
-                url: "/about/company/team/employees",
+                label: 'Employees',
+                url: '/about/company/team/employees',
                 icon: RiUserLine,
               },
             ],
@@ -130,40 +130,40 @@ export const treeData: TreeData = [
         ],
       },
       {
-        label: "Mission",
-        url: "/about/mission",
+        label: 'Mission',
+        url: '/about/mission',
         icon: RiFocus2Line,
       },
     ],
   },
   {
-    label: "Services",
-    url: "/services",
+    label: 'Services',
+    url: '/services',
     icon: RiNodeTree,
     submenu: [
       {
-        label: "Web Design",
-        url: "/services/web",
+        label: 'Web Design',
+        url: '/services/web',
         icon: RiReactjsFill,
       },
       {
-        label: "Mobile App Development",
-        url: "/services/mobile",
+        label: 'Mobile App Development',
+        url: '/services/mobile',
         icon: RiAndroidLine,
       },
       {
-        label: "Digital Marketing",
-        url: "/services/marketing",
+        label: 'Digital Marketing',
+        url: '/services/marketing',
         icon: RiNodeTree,
         submenu: [
           {
-            label: "SEO",
-            url: "/services/marketing/seo",
+            label: 'SEO',
+            url: '/services/marketing/seo',
             icon: RiSeoLine,
           },
           {
-            label: "Social Media Marketing",
-            url: "/services/marketing/social-media",
+            label: 'Social Media Marketing',
+            url: '/services/marketing/social-media',
             icon: RiFacebookCircleLine,
           },
         ],
@@ -171,8 +171,22 @@ export const treeData: TreeData = [
     ],
   },
   {
-    label: "Contact",
-    url: "/contact",
+    label: 'Contact',
+    url: '/contact',
     icon: RiContactsBookLine,
+  },
+];
+export const tabData: Array<{ title: string; content: string }> = [
+  {
+    title: 'The Hobbit',
+    content: `Bilbo Baggins, a timid hobbit, embarks on an unexpected adventure with a band of dwarves to reclaim their lost treasure. This magical tale captures themes of friendship, courage, and the importance of leaving one's comfort zone.`,
+  },
+  {
+    title: 'Fahrenheit 451',
+    content: `In a future where books are banned and burned, fireman Montag starts questioning society and risks everything to preserve knowledge by memorizing banned literature.`,
+  },
+  {
+    title: 'The Metamorphosis',
+    content: `Gregor Samsa wakes up one morning transformed into a giant insect. This Kafka story explores alienation, isolation, and the dehumanizing effects of societal expectations.`,
   },
 ];
